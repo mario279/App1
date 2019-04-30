@@ -32,7 +32,7 @@ function errorFunction(){
   function codeLatLng(lat, lng) {
 
     var latlng = new google.maps.LatLng(lat, lng);
-    geocoder.geocode({'latLng': latlng}, function(results, status) {
+    geocoder.geocoder({'latLng': latlng}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
       console.log(results)
         if (results[1]) {
