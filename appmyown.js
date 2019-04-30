@@ -13,6 +13,7 @@ async function getWeather(){
    const result = await fetch('https://crossorigin.me/api.openweathermap.org/data/2.5/weather?lat=-34.397,lon=150.644');
    const data = await result.json();
    console.log(data);
+   
 }
 getWeather();
 ///  end weather info
