@@ -11,7 +11,7 @@ var UIController = (function(){
 // weather info
 async function getWeather(){
 
-
+fetch('https://crossorigin.me/https://www.metaweather.com/api/location/2487956')
 //not added
   .then(result =>{
     console.log(result);
