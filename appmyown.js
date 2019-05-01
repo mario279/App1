@@ -14,7 +14,7 @@ document.querySelector('.add__btn').addEventListener('click',function(){
 })
 document.addEventListener('keypress',function(event) {
 
-  if (event.keycode===13){
+  if (event.keycode===13||event.which===13){
     console.log("enter key pressed");
   }
 
