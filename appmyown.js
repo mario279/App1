@@ -10,7 +10,7 @@ var UIController = (function(){
 
 // weather info
 async function getWeather(){
-   fetch('https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?lat=-34.397,lon=150.644',{mode: 'no-cors'});
+   fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat=-34.397,lon=150.644',{mode: 'no-cors'});
  }
   .then(result =>{
     console.log(result);
