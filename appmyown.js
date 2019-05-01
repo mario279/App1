@@ -9,7 +9,7 @@ var budgetController = (function(){
 
 var UIController = (function(){
 
-document.querySelector(''.add__btn').addEventListener('click',function(){
+document.querySelector('.add__btn').addEventListener('click',function(){
   console.log("button pressed");
 })
 document.addEventListener('keypress',function(event) {
