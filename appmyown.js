@@ -14,11 +14,11 @@ document.querySelector('.add__btn').addEventListener('click',function(){
 })
 document.addEventListener('keypress',function(event) {
 
-  if (event.keycode==33){
+  if (event.keycode==13){
     console.log("enter key pressed");
   }
 
-    console.log("");
+
 
 } );
   /* Act on the event */
