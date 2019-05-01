@@ -10,11 +10,20 @@ var UIController = (function(){
 
 // weather info
 async function getWeather(){
-   const result = await fetch('https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?lat=-34.397,lon=150.644');
-   const data = await result.json();
-   console.log(data);
+   fetch('https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?lat=-34.397,lon=150.644');
+ }
+  .then(result =>{
+    console.log(result);
+    return result.jason();
+  })
+  .then(data =>{
+    const today = data.consolidated_weather[0];
+    console.log('temperaature in ${data.title} stay between ${today.min_temp}.')
+  })
+  .catch(error =>console.log(error));
 
 }
+
 getWeather();
 ///  end weather info
 
