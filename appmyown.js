@@ -6,7 +6,25 @@ var budgetController = (function(){
 
 )();
 
+
 var UIController = (function(){
+
+document.querySelector(''.add__btn').addEventListener('click',function(){
+  console.log("button pressed");
+})
+document.addEventListener('keypress',function(event) {
+
+  if (event.keycode==33){
+    console.log("enter key pressed");
+  }
+
+    console.log("");
+
+} );
+  /* Act on the event */
+
+
+
 
 // weather info
 async function getWeather(){
