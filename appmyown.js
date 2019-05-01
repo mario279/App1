@@ -11,7 +11,7 @@ var UIController = (function(){
 // weather info
 async function getWeather(){
 
-fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat=-34.397,lon=150.644')
+fetch('https://crossorigin.me/https://www.metaweaather.com/api/location/2487956')
 //not added
   .then(result =>{
     console.log(result);
