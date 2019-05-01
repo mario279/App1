@@ -8,14 +8,14 @@ var budgetController = (function(){
 
 
 var UIController = (function(){
-
-document.querySelector('.add__btn').addEventListener('click',function(){
-  console.log("button pressed");
-})
+var ctrlAddItem = function(){
+   console.log("keypressed");
+}
+document.querySelector('.add__btn').addEventListener('click',ctrlAddItem);
 document.addEventListener('keypress',function(event) {
 
   if (event.keycode===13||event.which===13){
-    console.log("enter key pressed");
+    ctrlAddItem();
   }
 
 
