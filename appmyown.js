@@ -9,18 +9,33 @@ var budgetController = (function() {
 
 var UIController = (function() {
 
+ var DOMStrings = {
+
+    inputType = '.add__type',
+    descType = '.add__description',
+    valueInput = '.add__value',
+    inputButton = '.add__btn'
+
+ }
 
   return {
     getInput: function() {
       return {
 
-        type: document.querySelector('.add__type').value, // will select in the future inc or exp
-        description: document.querySelector('.add__description').value,
-        value: document.querySelector('.add__value').value
+        type: document.querySelector(DOMStrings.inputType).value, // will select in the future inc or exp
+        description: document.querySelector(DOMStrings.descType).value,
+        value: document.querySelector(DOMStrings.valueInput).value
 
+      }
+      getDOMStrings = function(){
+           return DOMStrings;
       }
 
     }
+
+
+
+
   } //end return of the object
 
 
@@ -93,24 +108,54 @@ function startTime() {
 
 var controller = (function(budgetCtrl, UICtrl) {
 
-  var ctrlAddItem = function() {
+    var setupEventListeners = function()
+
+    {
+
+      var StringsDOM = UIController.getDOMStrings();
+      document.querySelector(input.inputButton).addEventListener('click', ctrlAddItem);
+
+      document.addEventListener('keypress', function(event)
+      {
+          if (event.keycode === 13 || event.which === 13)
+          {
+            ctrlAddItem();
+          }
+
+
+      } // end setupEventListeners
+
+    }
+}
+
+
+
+
+  var ctrlAddItem = function()
+  {
     var input = UIController.getInput();
     console.log(input);
-  }   // end ctrl add item
 
-  document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
-  document.addEventListener('keypress', function(event) {
-    if (event.keycode === 13 || event.which === 13) {
-      ctrlAddItem();
-       }
-   } // end add event listener on keypress)
-)
+  }
+
+  var input = UIController.getInput();
+  console.log(input);
+
+  return {
+
+    init: function(){
+
+      console.log('application started');
+      setupEventListeners();
+    }
+  };
+
 
 
 })(budgetController, UIController);
 
 
-
+controller.init();
       // we will add a listener only to the button, whiich shoudl listen to the click event
         // since we need the dom to listen to the event and not necessarily the box, we need to ad the addEventListener to the dom
         //  document.addEventListener('keypress', function(event) {
