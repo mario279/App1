@@ -21,7 +21,7 @@ return {
     }
 
   }
-}
+}   //end return of the object
 var ctrlAddItem = function(){
    console.log("keypressed");
 }
@@ -109,7 +109,7 @@ startTime();
 
 
 
-})    ();  //end startTime
+})    ();  //end UI controller
 
 
 var controller = (function(budgetCtrl, UICtrl){
@@ -117,7 +117,7 @@ var controller = (function(budgetCtrl, UICtrl){
 
 // we will add a listener only to the button, whiich shoudl listen to the click event
 
-var = UIController.getInput();
+var input = UIController.getInput();
 
 // since we need the dom to listen to the event and not necessarily the box, we need to ad the addEventListener to the dom
 //  document.addEventListener('keypress', function(event) {
