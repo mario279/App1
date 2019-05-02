@@ -117,16 +117,16 @@ var controller = (function(budgetCtrl, UICtrl){
 
 // we will add a listener only to the button, whiich shoudl listen to the click event
 
-var input = UIController.getInput();
-console.log(input);
+
 // since we need the dom to listen to the event and not necessarily the box, we need to ad the addEventListener to the dom
 //  document.addEventListener('keypress', function(event) {
 
-//     if (event.keycode ===13|| event.which ==13)
-  //   {
-//       console.log('enter was pressed');
-//     }
-//     else
+    if (event.keycode ===13|| event.which ==13)
+    {
+      var input = UIController.getInput();
+      console.log(input);
+    }
+    else
 
   })(budgetController, UIController);
   // get input data
