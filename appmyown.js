@@ -14,9 +14,9 @@ return {
   getInput: function(){
     return{
 
-      type : document.querySelector('add__type').value, // will select in the future inc or exp
-      description : document.querySelector('add__description').value,
-      value : document.querySelector('add__value').value
+      type : document.querySelector('.add__type').value, // will select in the future inc or exp
+      description : document.querySelector('.add__description').value,
+      value : document.querySelector('.add__value').value
 
     }
 
