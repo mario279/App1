@@ -22,47 +22,28 @@ return {
 
   }
 }   //end return of the object
-var ctrlAddItem = function(){
-   console.log("keypressed");
-}
-document.querySelector('.add__btn').addEventListener('click',ctrlAddItem);
-document.addEventListener('keypress',function(event) {
-
-  if (event.keycode===13||event.which===13){
-    ctrlAddItem();
-  }
-
-
 
 } );
   /* Act on the event */
-
-
-
-
 // weather info
-async function getWeather(){
-fetch('https://crossorigin.me/https://www.metaweather.com/api/location/2487956')
-
-//not added
-  .then(result =>{
-    console.log(result);
-    return result.jason();
-  })
-  .then(data =>{
-    const today = data.consolidated_weather[0];
-    console.log('temperaature in ${data.title} stay between ${today.min_temp}.')
-  })
-  .catch(error =>console.log(error));
-
-}
-
-getWeather();
+// async function getWeather(){
+// fetch('https://crossorigin.me/https://www.metaweather.com/api/location/2487956')
+//
+// //not added
+//   .then(result =>{
+//     console.log(result);
+//     return result.jason();
+//   })
+//   .then(data =>{
+//     const today = data.consolidated_weather[0];
+//     console.log('temperaature in ${data.title} stay between ${today.min_temp}.')
+//   })
+//   .catch(error =>console.log(error));
+//
+// }
+//
+// getWeather();
 ///  end weather info
-
-
-
-
 function checkTime(i){
  if(i<0){
      i = '0' +i;
@@ -84,9 +65,6 @@ startTime();
      seconds = checkTime(seconds);
 
      var time = hours + ":" + minutes + ":" + seconds;
-
-
-
     // var fieldNameElement2 = document.querySelector(".current__time--text");
     //  fieldNameElement2.textContent = hours + minutes + seconds;
     // t = setTimeout(function(){ startTime()}, 500);
@@ -105,30 +83,31 @@ startTime();
 
   }
 
-
-
-
-
 })    ();  //end UI controller
 
 
 var controller = (function(budgetCtrl, UICtrl){
 
+  var ctrlAddItem = function(){
+
+    var input = UIController.getInput();
+    console.log(input);
+
+  }
+
+  document.querySelector('.add__btn').addEventListener('click',ctrlAddItem);
+
+  document.addEventListener('keypress',function(event) {
+
+    if (event.keycode===13||event.which===13){
+      ctrlAddItem();
+    }
 
 // we will add a listener only to the button, whiich shoudl listen to the click event
-
-
 // since we need the dom to listen to the event and not necessarily the box, we need to ad the addEventListener to the dom
 //  document.addEventListener('keypress', function(event) {
 
-    if (event.keycode ===13|| event.which ==13)
-    {
-      var input = UIController.getInput();
-      console.log(input);
-    }
-    
-
-  })(budgetController, UIController);
+})(budgetController, UIController);   // end controller
   // get input data
 
   //add the item to the budget budgetController
