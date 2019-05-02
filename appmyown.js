@@ -126,7 +126,7 @@ var controller = (function(budgetCtrl, UICtrl){
       var input = UIController.getInput();
       console.log(input);
     }
-    else
+    
 
   })(budgetController, UIController);
   // get input data
