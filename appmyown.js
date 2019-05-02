@@ -8,6 +8,20 @@ var budgetController = (function(){
 
 
 var UIController = (function(){
+
+
+return {
+  getInput: function(){
+    return{
+
+      type : document.querySelector('add__type').value, // will select in the future inc or exp
+      description : document.querySelector('add__description').value,
+      value : document.querySelector('add__value').value
+
+    }
+
+  }
+}
 var ctrlAddItem = function(){
    console.log("keypressed");
 }
@@ -103,7 +117,7 @@ var controller = (function(budgetCtrl, UICtrl){
 
 // we will add a listener only to the button, whiich shoudl listen to the click event
 
-
+var = UIController.getInput();
 
 // since we need the dom to listen to the event and not necessarily the box, we need to ad the addEventListener to the dom
 //  document.addEventListener('keypress', function(event) {
