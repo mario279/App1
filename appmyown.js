@@ -11,7 +11,7 @@ var UIController = (function() {
 
  var DOMStrings = {
 
-    inputType = '.add__type',
+    inputTyp = '.add__type',
     descType = '.add__description',
     valueInput = '.add__value',
     inputButton = '.add__btn'
@@ -22,8 +22,8 @@ var UIController = (function() {
     getInput: function() {
       return {
 
-        type: document.querySelector(DOMStrings.inputType).value, // will select in the future inc or exp
-        description: document.querySelector(DOMStrings.descType).value,
+        type: document.querySelector(DOMStrings.inputTyp).value, // will select in the future inc or exp
+        description: document.querySelector(DOMStrings.descTyp).value,
         value: document.querySelector(DOMStrings.valueInput).value
 
       }
