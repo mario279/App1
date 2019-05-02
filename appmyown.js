@@ -93,26 +93,29 @@ function startTime() {
 
 var controller = (function(budgetCtrl, UICtrl) {
 
-      var ctrlAddItem = function() {
+  var ctrlAddItem = function() {
+    var input = UIController.getInput();
+    console.log(input);
+  }   // end ctrl add item
 
-        var input = UIController.getInput();
-        console.log(input);
+  document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
+  document.addEventListener('keypress', function(event) {
+    if (event.keycode === 13 || event.which === 13) {
+      ctrlAddItem();
+       }
+   } // end add event listener on keypress)
+)
 
-      }
 
-      document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
+}(budgetController, UIController);
 
-      document.addEventListener('keypress', function(event) {
 
-        if (event.keycode === 13 || event.which === 13) {
-          ctrlAddItem();
-        }
 
-        // we will add a listener only to the button, whiich shoudl listen to the click event
+      // we will add a listener only to the button, whiich shoudl listen to the click event
         // since we need the dom to listen to the event and not necessarily the box, we need to ad the addEventListener to the dom
         //  document.addEventListener('keypress', function(event) {
 
-      })(budgetController, UIController); // end controller
+   // end controller
       // get input data
 
       //add the item to the budget budgetController
