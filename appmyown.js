@@ -135,11 +135,9 @@ var controller = (function(budgetCtrl, UICtrl)
   var input = UIController.getInput();
   console.log(input);
 
-  return
-  {
+  return{
 
-    init: function()
-    {
+    init: function(){
 
       console.log('application started');
       setupEventListeners();
