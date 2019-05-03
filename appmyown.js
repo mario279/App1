@@ -109,34 +109,32 @@ function startTime() {
 var controller = (function(budgetCtrl, UICtrl) {
 
     var setupEventListeners = function()
-
     {
 
-      var StringsDOM = UIController.getDOMStrings();
-      document.querySelector(input.inputButton).addEventListener('click', ctrlAddItem);
+        var StringsDOM = UIController.getDOMStrings();
+        document.querySelector(input.inputButton).addEventListener('click', ctrlAddItem);
 
-      document.addEventListener('keypress', function(event)
-      {
+        document.addEventListener('keypress', function(event)
+        {
           if (event.keycode === 13 || event.which === 13)
           {
             ctrlAddItem();
           }
+        })
 
-
-      } // end setupEventListeners
-
-    }
-}
-
-
-
-
-  var ctrlAddItem = function()
-  {
-    var input = UIController.getInput();
-    console.log(input);
+    } // end setupEvetListeners
 
   }
+  }
+
+
+
+
+  var ctrlAddItem = function() {
+      var input = UIController.getInput();
+      console.log(input);
+
+    }
 
   var input = UIController.getInput();
   console.log(input);
@@ -149,8 +147,6 @@ var controller = (function(budgetCtrl, UICtrl) {
       setupEventListeners();
     }
   };
-
-
 
 })(budgetController, UIController);
 
