@@ -106,7 +106,8 @@ function startTime() {
 })(); //end UI controller
 
 
-var controller = (function(budgetCtrl, UICtrl) {
+var controller = (function(budgetCtrl, UICtrl)
+{
 
     var setupEventListeners = function()
     {
@@ -124,13 +125,8 @@ var controller = (function(budgetCtrl, UICtrl) {
 
     } // end setupEvetListeners
 
-  }
-  }
-
-
-
-
-  var ctrlAddItem = function() {
+  var ctrlAddItem = function()
+    {
       var input = UIController.getInput();
       console.log(input);
 
@@ -139,16 +135,18 @@ var controller = (function(budgetCtrl, UICtrl) {
   var input = UIController.getInput();
   console.log(input);
 
-  return {
+  return
+  {
 
-    init: function(){
+    init: function()
+    {
 
       console.log('application started');
       setupEventListeners();
     }
   };
 
-})(budgetController, UIController);
+} ) (budgetController, UIController);
 
 
 controller.init();
