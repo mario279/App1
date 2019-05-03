@@ -108,7 +108,7 @@ var controller = (function(budgetCtrl, UICtrl)
     {
 
         var StringsDOM = UIController.getDOMStrings();
-        document.querySelector(input.inputButton).addEventListener('click', ctrlAddItem);
+        document.querySelector(StringsDOM.inputButton).addEventListener('click', ctrlAddItem);
 
         document.addEventListener('keypress', function(event)
         {
