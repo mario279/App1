@@ -26,14 +26,14 @@ var UIController = (function() {
         description: document.querySelector(DOMStrings.descType).value,
         value: document.querySelector(DOMStrings.valueInput).value
 
-              }
-      getDOMStrings : function{
-           return DOMStrings;
-                                 }
-                        }
-         } //end return of the object
+      };
 
+    }, //end return of the object
 
+         getDOMStrings : function(){
+              return DOMStrings;
+                                    }
+                           }
 /* Act on the event */
 // weather info
 // async function getWeather(){
