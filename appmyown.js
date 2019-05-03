@@ -26,17 +26,13 @@ var UIController = (function() {
         description: document.querySelector(DOMStrings.descType).value,
         value: document.querySelector(DOMStrings.valueInput).value
 
-      }
-      getDOMStrings : function(){
+              }
+      getDOMStrings : function( ){
            return DOMStrings;
-      }
+                                 }
 
-    }
-
-
-
-
-  } //end return of the object
+                        }
+         } //end return of the object
 
 
 /* Act on the event */
@@ -103,7 +99,7 @@ function startTime() {
 
 } //end startTime
 
-})(); //end UI controller
+} )(); //end UI controller
 
 
 var controller = (function(budgetCtrl, UICtrl)
