@@ -11,10 +11,10 @@ var UIController = (function() {
 
  var DOMStrings = {
 
-    inputTyp = '.add__type',
-    descType = '.add__description',
-    valueInput = '.add__value',
-    inputButton = '.add__btn'
+    inputTyp : '.add__type',
+    descType : '.add__description',
+    valueInput : '.add__value',
+    inputButton : '.add__btn'
 
  }
 
