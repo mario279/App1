@@ -30,7 +30,6 @@ var UIController = (function() {
       getDOMStrings : function{
            return DOMStrings;
                                  }
-
                         }
          } //end return of the object
 
