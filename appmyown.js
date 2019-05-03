@@ -23,7 +23,7 @@ var UIController = (function() {
       return {
 
         type: document.querySelector(DOMStrings.inputTyp).value, // will select in the future inc or exp
-        description: document.querySelector(DOMStrings.descTyp).value,
+        description: document.querySelector(DOMStrings.descType).value,
         value: document.querySelector(DOMStrings.valueInput).value
 
       }
