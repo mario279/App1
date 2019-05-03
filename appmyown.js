@@ -27,7 +27,7 @@ var UIController = (function() {
         value: document.querySelector(DOMStrings.valueInput).value
 
               }
-      getDOMStrings : function( ){
+      getDOMStrings : function{
            return DOMStrings;
                                  }
 
