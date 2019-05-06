@@ -17,12 +17,12 @@ var budgetController = (function() {
 
      var data = {
 
-       var allItems: {
+       allItems: {
          expense: [],
          income:[]
 
        }
-       var allItemsInit: {
+     allItemsInit: {
          expense: 0,
          income:0
 
