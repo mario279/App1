@@ -2,6 +2,34 @@
 //the variable and the function cannot be accessed from the outside
 var budgetController = (function() {
 
+     var expense = function (id, description, value) {
+         this.id = id;
+         this.description = description;
+         this.value = value;
+     }
+
+     var income = function(id, description, value){
+       this.id = id;
+       this.description = description;
+       this.value = value;
+
+     }
+
+     var data = {
+
+       var allItems: {
+         expense: [],
+         income:[]
+
+       }
+       var allItemsInit: {
+         expense: 0,
+         income:0
+
+       }
+
+     }
+
   }
 
 )();
